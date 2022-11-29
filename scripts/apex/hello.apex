@@ -5,6 +5,8 @@
 // You can also execute the entire file by running the command:
 //     SFDX: Execute Anonymous Apex with Editor Contents
 
-string tempvar = 'Enter_your_name_here';
-System.debug('Hello World!');
-System.debug('My name is ' + tempvar);
+// Add account and related contact
+ Contact contact = new Contact(LastName='Smith');
+        Lead lead = new Lead(LastName='Smith',Company='Unknown');
+        insert contact;
+        insert lead;
