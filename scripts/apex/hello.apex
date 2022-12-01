@@ -6,7 +6,6 @@
 //     SFDX: Execute Anonymous Apex with Editor Contents
 
 // Add account and related contact
- Contact contact = new Contact(LastName='Smith');
-        Lead lead = new Lead(LastName='Smith',Company='Unknown');
-        insert contact;
-        insert lead;
+Contact contact = new Contact(FirstName='Serhii', LastName='Baklanov');
+insert contact;
+delete contact;

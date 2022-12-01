@@ -36,10 +36,5 @@
         <members>*</members>
         <name>CustomObject</name>
     </types>
-    </types>
-        <types>
-        <members>*</members>
-        <name>Object</name>
-    </types>
     <version>55.0</version>
 </Package>

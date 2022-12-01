@@ -3,7 +3,7 @@
     <fullName>Property__c</fullName>
     <externalId>false</externalId>
     <label>Property</label>
-    <referenceTo>Property__c</referenceTo>
+    <referenceTo>Property2__c</referenceTo>
     <relationshipLabel>Offers</relationshipLabel>
     <relationshipName>Offers</relationshipName>
     <relationshipOrder>0</relationshipOrder>
