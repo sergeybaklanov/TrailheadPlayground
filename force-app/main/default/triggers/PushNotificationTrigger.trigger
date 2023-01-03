@@ -14,6 +14,6 @@ trigger PushNotificationTrigger on Property__c (after update) {
         } 
         
     }
-	*/
+    */
 
 }

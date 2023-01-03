@@ -1,4 +1,4 @@
-<apex:page>
+<apex:page >
     <h1> Hello world</h1>
     <apex:pageBlock title="A block Title">
         <apex:pageBlockSection title="A Section Title">
