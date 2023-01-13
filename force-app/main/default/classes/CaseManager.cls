@@ -12,16 +12,19 @@ global with sharing class CaseManager {
         return result;
     }
     @HttpPost
-    global static ID createCase(String subject, String status,
-        String origin, String priority) {
-        Case thisCase = new Case(
-            Subject=subject,
-            Status=status,
-            Origin=origin,
-            Priority=priority);
-        insert thisCase;
-        return thisCase.Id;
-    }   
+    global static ID createCase(){
+        RestRequest request = RestContext.request;
+        Case newCase = new Case();
+
+        Map<String,Object> params = (Map<String,Object>) JSON.deserializeUntyped(request.requestBody.toString());
+
+        for(String fieldName : params.keySet()){
+            newCase.put(fieldName, params.get(fieldName));
+        }
+            insert newCase;
+            return newCase.Id;
+    }
+
     @HttpDelete
     global static void deleteCase() {
         RestRequest request = RestContext.request;
@@ -30,6 +33,7 @@ global with sharing class CaseManager {
         Case thisCase = [SELECT Id FROM Case WHERE Id = :caseId];
         delete thisCase;
     }     
+
     @HttpPut
     global static ID upsertCase(String subject, String status,
         String origin, String priority, String id) {
@@ -45,6 +49,7 @@ global with sharing class CaseManager {
         // Return the case ID.
         return thisCase.Id;
     }
+
     @HttpPatch
     global static ID updateCaseFields() {
         RestRequest request = RestContext.request;

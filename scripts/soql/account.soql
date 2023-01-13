@@ -2,6 +2,5 @@
 // You can execute queries in VS Code by selecting the
 //     query text and running the command:
 //     SFDX: Execute SOQL Query with Currently Selected Text
-SELECT Id,Number_Of_Contacts__c, (SELECT Id FROM Contacts) 
-                                       FROM Account
+SELECT Id,LeadSource FROM LEAD WHERE LeadSource ='' LIMIT 200
                                        
