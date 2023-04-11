@@ -118,4 +118,3 @@ private class CaseManagerTest {
         System.assertEquals('In Progress', updatedCase.Status, 'Unexpected status');
     }
 }
-
