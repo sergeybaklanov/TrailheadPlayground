@@ -2,12 +2,8 @@
     <!-- Accont Name: {! Account.Name} -->
     <apex:detail relatedList="false"></apex:detail>
     <apex:relatedList list="Cases"></apex:relatedList>
-    
-    <apex:pageBlock title="Contact Details">
-        <apex:pageBlockSection title="Caonact page block section">
-            
-        </apex:pageBlockSection>
-    </apex:pageBlock>
+    <apex:relatedList list="Account"></apex:relatedList>
+   
 
     <!-- <apex:relatedList list="Contacts"> </apex:relatedList>
     <apex:relatedList list="Opportunities" pageSize="5"> </apex:relatedList>

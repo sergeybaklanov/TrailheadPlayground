@@ -1,6 +1,6 @@
 @IsTest
 private class AccountProcessorTest {
-    @testSetup
+    @TestSetup
     static void setup(){
 
         List<Account> accounts = new List<Account>();
@@ -18,13 +18,11 @@ private class AccountProcessorTest {
         insert listContacts;
     }
 
-     @isTest
+     @IsTest
         public static void accountProcessorTest(){
             List<Account> listAccounts = [SELECT Id,Number_Of_Contacts__c,(SELECT Id FROM Contacts) FROM Account];
             Map<Id,Account> idMap = new Map<Id,Account>(listAccounts);
             List<Id> listIds = new List<Id>(idMap.keySet());
-
-           // listIds.stream().sort((a1,a2)->a1.length()-a2.length());
             
             Test.startTest();
             AccountProcessor.countContacts(listIds);

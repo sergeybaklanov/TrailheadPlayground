@@ -1,6 +1,6 @@
 <apex:page standardController="Account" recordSetVar="accounts">
-    <apex:pageBlock>
-        <apex:pageBlockSection>
+    <apex:pageBlock >
+        <apex:pageBlockSection >
             <ul>
                 <apex:repeat var="a" value="{!accounts}">
                 <li><apex:outputLink value="{!URLFOR($Action.Account.View, a.Id)}">{!a.Name}</apex:outputLink></li>
